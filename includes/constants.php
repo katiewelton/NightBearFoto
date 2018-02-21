@@ -13,10 +13,10 @@ define('LOAD_AFTER_WP', 10);
 define('LOAD_AFTER_THEME', 100);
 
 // Sets the cmb2 prefixes
-define('CMB2_PREFIX', '_theme_cmb2_');
-define('WPTHEME_OPTIONS_KEY', '_theme_options');
+define('CMB2_PREFIX', '_nbf_cmb2_');
+define('WPTHEME_OPTIONS_KEY', '_nbf_options');
 define('WPTHEME_OPTIONS_PREFIX', WPTHEME_OPTIONS_KEY . '_metabox');
-define('LOCALE', 'theme');
+define('LOCALE', 'nbf');
 
 // Sets whether Brunch should rewrite asset urls when requested over LAN
 define('BRUNCH_LOCAL_ASSETS', false);
