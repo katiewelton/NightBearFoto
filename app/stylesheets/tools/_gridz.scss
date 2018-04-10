@@ -1,11 +1,11 @@
 $_num-grid-col: 12;
 $_breakpoints: (
   xs: (
-    min-width: 320,
+    min-width: 0,
     gutter-spacing: 20
   ),
   sm: (
-    min-width: 640,
+    min-width: 520,
     gutter-spacing: 20
   ),
   md: (
