@@ -125,9 +125,37 @@ class ThemeAdmin {
     // Set our CMB2 fields
 
     $cmb->add_field([
+      'name' => __( 'Company Logo', LOCALE ),
+      'desc' => __( 'Upload the site logo', LOCALE ),
+      'id'   => 'company_logo',
+      'type' => 'file'
+    ]);
+
+    $cmb->add_field([
       'name' => __( 'Copyright Text', LOCALE ),
       'desc' => __( 'Enter your sites copyright text here', LOCALE ),
       'id'   => 'copyright',
+      'type' => 'text'
+    ]);
+
+    $cmb->add_field([
+      'name' => __( 'Facebook URL', LOCALE ),
+      'desc' => __( 'Add your Facebook URL', LOCALE ),
+      'id'   => 'facebook',
+      'type' => 'text'
+    ]);
+
+    $cmb->add_field([
+      'name' => __( 'Twitter URL', LOCALE ),
+      'desc' => __( 'Add your Twitter URL', LOCALE ),
+      'id'   => 'twitter',
+      'type' => 'text'
+    ]);
+
+    $cmb->add_field([
+      'name' => __( 'Instagram Handle', LOCALE ),
+      'desc' => __( 'Add your instagram Handle', LOCALE ),
+      'id'   => 'instagram',
       'type' => 'text'
     ]);
   }
