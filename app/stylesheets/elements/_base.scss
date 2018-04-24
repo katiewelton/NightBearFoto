@@ -41,23 +41,14 @@
 
   h1,
   h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-weight: 700;
-  }
-
-  h1,
-  h2,
   h3 {
-    margin-bottom: 30px;
+    margin-bottom: $double-padding;
   }
 
   h4,
   h5,
   h6 {
-    margin-bottom: 20px;
+    margin-bottom: $single-padding;
   }
 
   h1 {
@@ -97,6 +88,7 @@
 
   a {
     color: inherit;
+    display: block;
 
     &:focus {
       outline: 0;
@@ -110,10 +102,10 @@
 
   ul:not([class]),
   ol:not([class]) {
-    margin: 0 0 20px 20px;
+    margin: 0 0 $double-padding $double-padding;
 
     > li:not(:last-child) {
-      margin-bottom: 20px;
+      margin-bottom: $double-padding;
     }
 
     &:last-child {
@@ -124,7 +116,7 @@
   ul:not([class]) {
     ul {
       list-style: circle;
-      margin: 10px 0 10px 20px;
+      margin: $single-padding 0 $single-padding $double-padding;
 
       ul {
         list-style: square;
@@ -137,7 +129,7 @@
 
     ol {
       list-style: lower-alpha;
-      margin: 10px 0 10px 20px;
+      margin: $single-padding 0 $single-padding $double-padding;
 
       ol {
         list-style: lower-roman;
@@ -158,7 +150,7 @@
   }
 
   p:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: $double-padding;
   }
 }
 
@@ -189,14 +181,14 @@
 
   ul:not([class]),
   ol:not([class]) {
-    margin: 0 0 30px 30px;
+    margin: 0 0 $double-padding $double-padding;
   }
 
   *:not(li) > ul:not([class]) {
-    margin: 0 0 30px 60px;
+    margin: 0 0 $double-padding $double-padding * 2;
 
     > li::before {
-      left: -60px;
+      left: -$double-padding * 2;
     }
   }
 }

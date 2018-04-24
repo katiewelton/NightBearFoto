@@ -30,8 +30,29 @@ class CustomPostTypes {
       'taxonomies' => ['type']
     ];
 
-    // Uncomment line below to activate Portfolio custom post type
-    // $this->register_custom_post_types($custom_post_types);
+    $custom_post_types['team'] = [
+      'labels' => $this->generate_cpt_labels_for(
+        'Team',
+        'Team Member'
+      ),
+      'public' => true,
+      'menu_position' => 28,
+      'menu_icon' => 'dashicons-groups',
+      'capability_type' => 'post',
+      'has_archive' => true,
+      'supports' => [
+        'title',
+        'editor',
+        'thumbnail',
+        'page-attributes'
+      ],
+      'rewrite' => [
+        'slug' => 'team',
+        'with_front' => false
+      ]
+    ];
+
+    $this->register_custom_post_types($custom_post_types);
   }
 
   public function initialize_custom_taxonomies() {
