@@ -32,8 +32,8 @@ class CustomPostTypes {
 
     $custom_post_types['team'] = [
       'labels' => $this->generate_cpt_labels_for(
-        'Team',
-        'Team Member'
+        'Team Member',
+        'Team'
       ),
       'public' => true,
       'menu_position' => 28,
@@ -49,6 +49,24 @@ class CustomPostTypes {
       'rewrite' => [
         'slug' => 'team',
         'with_front' => false
+      ]
+    ];
+
+    $custom_post_types['testimonials'] = [
+      'labels' => $this->generate_cpt_labels_for(
+        'Testimonial',
+        'Testimonials'
+      ),
+      'public' => true,
+      'menu_position' => 29,
+      'menu_icon' => 'dashicons-format-quote',
+      'capability_type' => 'post',
+      'has_archive' => false,
+      'supports' => [
+        'title',
+        'editor',
+        'thumbnail',
+        'page-attributes'
       ]
     ];
 
