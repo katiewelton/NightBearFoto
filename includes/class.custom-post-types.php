@@ -4,6 +4,7 @@ class CustomPostTypes {
   public function __construct() {
     add_action('init', [$this, 'initialize_cpts']);
     add_action('init', [$this, 'initialize_custom_taxonomies']);
+    add_filter('enter_title_here', [$this, 'testimonial_cpt_default_title']);
   }
 
   public function initialize_cpts() {
@@ -142,5 +143,13 @@ class CustomPostTypes {
       'new_item_name' => "New $singular Name",
       'menu_name' => $plural
     ];
+  }
+
+  public function testimonial_cpt_default_title($title) {
+    if(get_current_screen()->post_type == 'testimonials') {
+      $title = 'Enter the testimonial author here';
+    }
+
+    return $title;
   }
 }
